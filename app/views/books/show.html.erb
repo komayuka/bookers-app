@@ -7,17 +7,15 @@
     </thead>
 <tbody>
     <div class="list-wrap">
-    <% @books.each do |book| %>
     <div class="list-comment">
     <tr>
-    <td class="list-title"><%= book.title %></td>
-    <td class="list-body"><%= book.body %></td>
-    <td><%= link_to 'show', book %></td>
-    <td><%= lonk_to 'edit', edit_book_path(book) %></td>
-    <td><%=link_to 'destroy', book_path(book), method: :delate, date: {confilm: 'Are you sure?'} %></td>
+    <td class="list-title"><%= @book.title %></td>
+    <td class="list-body"><%= @book.body %></td>
+
     </tr>
    </div>
 </div>
-<% end %>
    </tbody>
   </table>
+
+<%= link_to "Edit", edit_book_path(@book.id) %>
