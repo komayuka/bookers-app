@@ -12,13 +12,12 @@
     <tr>
     <td class="list-title"><%= book.title %></td>
     <td class="list-body"><%= book.body %></td>
-     <td><%= link_to 'Show', book %></td>
-    <td><%= link_to 'Edit', edit_book_path(book) %></td>
-    <td><%= link_to 'Destroy', book_path(book), method: :delate, date: { confilm: 'Are you sure?') %></td>
+    <td><%= link_to 'show', book %></td>
+    <td><%= lonk_to 'edit', edit_book_path(book) %></td>
+    <td><%=link_to 'destroy', book_path(book), method: :delate, date: {confilm: 'Are you sure?'} %></td>
     </tr>
    </div>
 </div>
 <% end %>
-
-
-<%= link_to "edit", edit_book_path(@book) %>
+   </tbody>
+  </table>
