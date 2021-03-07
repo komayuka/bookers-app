@@ -1,3 +1,5 @@
+<%= notice %>
+
 <header>
  <h1>Books</h1>
 </header>
@@ -18,7 +20,7 @@
     <td class="list-body"><%= book.body %></td>
     <td><%= link_to 'show', book %></td>
     <td><%= link_to 'edit', edit_book_path(book) %></td>
-    <td><%= link_to 'destroy', book, method: :delete, "data-confilm" => "Are you sure?" %></td>
+    <td><%= link_to 'destroy', book, method: :delete %></td>
     </tr>
    </div>
 </div>
