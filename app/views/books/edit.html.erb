@@ -1,11 +1,6 @@
 <h1>Editing Book</h1>
 <%= form_with model:@book, local:true do |f| %>
-<% if @book.errors.any? %>
-<h3><%= @book.errors.count %>error</h3>
-<% @book.errors.full_messages.each do |message| %>
-<%= message %>
-<% end %>
-<% end %>
+<%= render 'layouts/error_messages', model: f.object %>
 <div class="field">
   <%= f.label :Title %>
   <%= f.text_field :title %>
@@ -19,6 +14,6 @@
 </div>
 <% end %>
 
-<%= link_to "Edit", edit_book_path(@book.id) %>
+<%= link_to "show", book_path(@book) %>
 |
 <%= link_to "Back", books_path %>
